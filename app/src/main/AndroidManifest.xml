@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.beilei.zz.dq">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 从sdcard中读取数据的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 社会化分享需要使用的权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:name=".zz.beilei.idianqi.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57e89e43e0f55ac61b0017e9" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="04cb836479caaf700776e50095e331d1" />
+
+        <activity
+            android:name=".zz.beilei.idianqi.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zz.beilei.idianqi.RegisterActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.AdActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.WelcomeActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.HomeActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.LoginActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.RegSetPwd"
+            android:label="@string/title_activity_reg_set_pwd" />
+        <activity android:name=".zz.beilei.idianqi.MyMsgActivity" />
+        <activity
+            android:name=".zz.beilei.idianqi.PersonActivity"
+            android:label="@string/title_activity_person" />
+        <activity android:name=".zz.beilei.idianqi.CheckPwdActivity" />
+        <activity android:name=".zz.beilei.idianqi.MyVipCardActivity" />
+        <activity
+            android:name=".zz.beilei.idianqi.HelpActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".hzz.HeZuoZeActivity" />
+        <activity android:name=".zz.beilei.idianqi.AboutUsActivity" />
+        <activity android:name=".zz.beilei.idianqi.JoinUsActivity" />
+        <activity android:name=".zz.beilei.idianqi.DuiHuanActivity" />
+        <activity android:name=".zz.beilei.idianqi.PayActivity" />
+        <activity android:name=".zz.beilei.idianqi.AddBankCard" />
+        <activity android:name=".zz.beilei.idianqi.CheckNikeActivity" />
+        <activity android:name=".zz.beilei.idianqi.ForgetPasswordActivity" />
+        <activity android:name=".zz.beilei.idianqi.ForgetPasswordsetPwd" />
+        <!-- 社会化分享需要祖册的activity -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".zz.beilei.idianqi.MyBankCardActivity" />
+        <activity
+            android:name=".zz.beilei.idianqi.BuyVipCardActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.ActivityBingXiang"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.MDMFXActivity"
+            android:label="@string/title_activity_mdmfx"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.MyJiFenActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.SetDuiHuanPwd"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.ActivityDianChiLu"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.ActivityDianShi"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.ActivityXiYiJi"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.ActivityKongTiao"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.ActivityDianFanBao"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.ActivityDianNao"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".zz.beilei.idianqi.ActivityShouJi"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".zz.beilei.idianqi.OKActivity"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>

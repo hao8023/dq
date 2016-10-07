@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+    defaultConfig {
+        applicationId "com.beilei.zz.dq"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.yolanda.nohttp:nohttp:1.0.6'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile files('libs/universal-image-loader-1.9.4-with-sources.jar')
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile 'com.yancy.imageselector:imageselector:1.3.3'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.youth.banner:banner:1.3.2'
+    //轮播图
+    compile files('libs/ShareSDK-Wechat-2.7.7.jar')
+    compile files('libs/MobCommons-2016.0830.1940.jar')
+    compile files('libs/ShareSDK-QQ-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.7.jar')
+    compile files('libs/ShareSDK-QZone-2.7.7.jar')
+    compile files('libs/ShareSDK-Core-2.7.7.jar')
+    compile files('libs/MobTools-2016.0830.1940.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.7.7.jar')
+    //tablayout  依赖
+    compile 'com.android.support:design:24.2.1'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile 'com.dou361.update:jjdxm-update:1.0.5'
+    compile 'com.dou361.download:jjdxm-download:1.0.3'
+    compile project(':PushSDK')
+}
